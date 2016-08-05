@@ -1,0 +1,36 @@
+﻿<Window x:Class="PresageDIctionaryBuilder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PresageDIctionaryBuilder"
+        mc:Ignorable="d"
+        Title="Presage Dictionary Builder"
+        Height="429.667" Width="591">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="355*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="text2ngramDisplay" HorizontalAlignment="Left" Height="20" Margin="12,47,0,0" TextWrapping="Wrap" Text="Select..." VerticalAlignment="Top" IsReadOnly="True" Width="354" Grid.Column="2" Grid.ColumnSpan="2" />
+        <TextBox x:Name="databasePathDisplay" HorizontalAlignment="Left" Height="19" Margin="13,190,0,0" TextWrapping="Wrap" Text="Select..." VerticalAlignment="Top" IsReadOnly="True" Width="353" Grid.Column="2" Grid.ColumnSpan="2" />
+        <Button x:Name="text2ngramSelect" Content="Open text2ngram" HorizontalAlignment="Left" Margin="0,47,0,0" VerticalAlignment="Top" Width="114" Height="20" Grid.Column="1" Click="text2ngramSelect_Click"/>
+        <Button x:Name="databasePathSelect" Content="Set database path" HorizontalAlignment="Left" Margin="0,189,0,0" VerticalAlignment="Top" Width="114" Height="20" Grid.Column="1" Click="databasePathSelect_Click"/>
+        <Button x:Name="StarConversion" Content="Create Dictionary" Grid.Column="3" HorizontalAlignment="Left" Margin="10,260,0,0" VerticalAlignment="Top" Width="112" Click="StarConversion_Click"/>
+        <ProgressBar x:Name="ProgressIndicator" Grid.Column="3" HorizontalAlignment="Left" Height="10" Margin="10,285,0,0" VerticalAlignment="Top" Width="112"/>
+        <TextBox x:Name="dictionaryPathDisplay" HorizontalAlignment="Left" Height="19" Margin="13,138,0,0" TextWrapping="Wrap" Text="Select..." VerticalAlignment="Top" IsReadOnly="True" Width="353" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Button x:Name="dictionaryPathSelect" Content="Open Dictionary FIle" HorizontalAlignment="Left" Margin="0,137,0,0" VerticalAlignment="Top" Width="114" Height="20" Grid.Column="1" Click="dictionaryPathSelect_Click"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="441" Grid.Column="1">
+            1 - Inform the path to the text2ngram .exe inside Presage folder.<LineBreak/>
+            If you don't have it, install Presage first.
+        </TextBlock>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="10,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="441" Grid.Column="1"><Run Text="2 - Open a text file containing all words and sentences w"/><Run Text="h"/><Run Text="ich will be used to create a custom dictionary."/><LineBreak/><Run Text="It must be a plain text file w"/><Run Text="i"/><Run Text="th ANSI Encoding."/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="10,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="441" Grid.Column="1" Text="3 - Set the path where the custom dictionary will be saved."/>
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="10,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="441" Grid.Column="1" Height="34"><Run Text="3 - "/><Run Text="Hit &quot;"/><Run Text="Create Dictionary"/><Run Text="&quot;"/><Run Text=" and wait while the input file is parsed and the custom database is created."/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="10,295,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="441" Grid.Column="1"><Run Text="4"/><Run Text=" - "/><Run Text="Put your new dictionary inside &quot;"/><Run Text="Applications\ACATApp\bin\Debug\Users\ACAT\WordPredictors\Presage"/><Run Text="&quot;"/><Run Text="."/><LineBreak/><Run Text="PS.: "/><Run Text="You may need to change &quot;Applications\ACATApp\bin\Debug\Users\ACAT\PresageWordPredictorSettings.xml&quot; in order to ACAT use your custom dicionary."/><LineBreak/><Run/></TextBlock>
+
+    </Grid>
+</Window>
